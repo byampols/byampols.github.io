@@ -2,20 +2,43 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>HTML + CSS</title>
   </head>
 
   <body>
     <header>
-      <h1>Student Bio</h1>
+      <div><h1>Ben Yampolsky</h1></div>
+      <div>
+        <nav>
+          <!--unordered list element-->
+          <ul>
+              <!--list item element-->
+              <li>
+                  <!--anchor element-->
+                  <a href="#about-me">About Me</a>
+              </li>
+              <li>
+                  <a href="#projects">Projects</a>
+              </li>
+              <li>
+                  <a href="#contact-me">Contact Me</a>
+              </li>
+          </ul>
+        </nav>
+    </div>
+
     </header>
 
-    <div class="container">
-      <section id="main-bio">
-        <!-- TODO: Replace content with your own info -->
-        <h2>Your Name</h2>
+    <section class=jumbotron>
+      <h2>Jumbo Subtitle </h2>
+    </section>
 
+    <div class="container">
+      <section id="about-me">
+        <div><h2>About Me</h2></div>
+        <h3>Ben Yampolsky</h3>
         <img
           id="bio-image"
           src="./assets/images/IMG_1456.JPG"
@@ -28,8 +51,28 @@
         </p>
       </section>
 
-      <section id="contact-info">
-        <h2>Contact Info</h2>
+      <section id="projects">
+        <div><h2>Projects</h2></div>
+        <div class="card-container">
+            <div class="project-card">
+                <img src="http://via.placeholder.com/500x500" alt="placeholder photo" />
+                <h3>Project Title</h3>
+            </div>
+
+            <div class="project-card">
+              <img src="http://via.placeholder.com/500x500" alt="placeholder photo" />
+              <h3>Project Title</h3>
+            </div>
+
+            <div class="project-card">
+              <img src="http://via.placeholder.com/500x500" alt="placeholder photo" />
+              <h3>Project Title</h3>
+            </div>
+        </div>
+      </section>
+
+      <section id="contact-me">
+        <div><h2>Contact Me</h2></div>
         <ul>
           <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
           <li><strong>Github:</strong> <a href="#">sampleName</a></li>
@@ -37,5 +80,10 @@
         </ul>
       </section>
     </div>
+
+    <footer>
+      <h2>&copy 2021 Ben Yampolsky</h2>
+    </footer>
+
   </body>
 </html>

@@ -1,36 +1,148 @@
+/*general styles begin*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #a23fd5;
+  --secondary-color: #e620b4;
+  --tertiary-color: #5e5ef6;
+  --background-color: #e2dadb;
+}
+
 body {
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-    line-height: 150%;
-    color: #333;
-    background-color: #efeee7;
-  }
+  font-size: 18px;
+  line-height: 150%;
+  color: #333;
+  background-color: var(--background-color);
+}
+/*general styles end*/
+
+/*header styles begin*/
+header {
+  background-image: url("../images/jumbo.jpg");
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  color: var(--background-color);
+  /*text-shadow: 0 0 1px rgba(235, 101, 52, 1);*/
+  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
+  padding: 10px 25px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 9999;
+  top: 0;
+}
+/*rgba(226,218,219,.75) #eb6534*/
+header h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: n;
+  font-size: 34px;
+  margin: 0;
+  padding-bottom: 15px;
+  border-bottom: 3px solid rgba(94, 94, 246, .65);
+  border-radius: 1px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+header nav {
+  margin-top: 15px;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: center;
+  list-style: none;
+  gap: 10px 0px;
+}
+
+header nav ul li a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 6vw; /*1.55vw*/
+}
+
+header nav ul li a:hover {
+  text-shadow: 0 0 10px rgba(173, 93, 78, .75);
+  border-radius: 15px;
+  text-shadow: none;
+}
+/*header styles end*/
+
+/*footer styles begin*/
+/*footer styles end*/
+
+/*jumbo styles begin*/
+.jumbotron {
+  background-image: url("../images/jumbo.jpg");
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  border-bottom: 5px solid #333;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.jumbotron h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  color: var(--background-color);
+  text-align: left;
+  font-weight: normal;
+  background: rgba(94, 94, 246, .5);
+  padding: 5px 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-right: -5px;
+  border-radius: 5px;
+}
+/*jumbo styles end*/
+
+/*container styles begin*/
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container h2 {
+  color: #333;
+  text-shadow: -1px -1px 1px rgba(162, 63, 213, .75), 1px -1px 1px rgba(162, 63, 213, .75), -1px 1px 1px rgba(162, 63, 213, .75), 1px 1px 1px rgba(162, 63, 213, .75);
+}
+/*container styles end*/
+
+/*about-me styles begin*/
+/*about-me styles end*/
+
+/*projects styles begin*/
+/*projects styles end*/
+
+/*contacts styles begin*/
+/*contacts styles end*/
+
+/*media queries*/
+
   
-  header {
-    background-color: #333;
-  }
   
-  h1 {
-    padding: 20px 0;
-    margin: 0 0 20px;
-    font-size: 28px;
-    color: #eee;
-    text-align: center;
-  }
+
   
-  .container {
-    width: 1024px;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    font-size: 24px;
-  }
-  
-  a {
-    color: #d21034;
-  }
+
   
   #main-bio,
   #contact-info,
