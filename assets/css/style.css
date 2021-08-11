@@ -82,6 +82,21 @@ header nav ul li a:hover {
 /*header styles end*/
 
 /*footer styles begin*/
+footer {
+  background-image: url("../images/jumbo.jpg");
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  padding: 10px;
+  border-top: 5px solid #333;
+}
+
+footer h2 {
+  color: var(--background-color);
+  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
+  font-size: 6vw;
+  text-align: center;
+}
 /*footer styles end*/
 
 /*jumbo styles begin*/
@@ -107,8 +122,8 @@ header nav ul li a:hover {
   padding: 5px 8px;
   margin-top: 5px;
   margin-bottom: 15px;
-  margin-right: -5px;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 /*jumbo styles end*/
 
@@ -122,15 +137,34 @@ header nav ul li a:hover {
 }
 
 .container h2 {
+  margin: 10px;
   color: #333;
   text-shadow: -1px -1px 1px rgba(162, 63, 213, .75), 1px -1px 1px rgba(162, 63, 213, .75), -1px 1px 1px rgba(162, 63, 213, .75), 1px 1px 1px rgba(162, 63, 213, .75);
+}
+
+.port-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 /*container styles end*/
 
 /*about-me styles begin*/
+#bio-image {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
 /*about-me styles end*/
 
 /*projects styles begin*/
+.project-card img {
+  width: 80%;
+}
 /*projects styles end*/
 
 /*contacts styles begin*/
@@ -143,26 +177,8 @@ header nav ul li a:hover {
 
   
 
-  
-  #main-bio,
-  #contact-info,
-  #bio-image {
-    float: left;
-  }
-  
-  #main-bio {
-    width: 70%;
-  }
-  
-  #contact-info {
-    width: 30%
-  }
-  
-  #bio-image {
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
-  }
+
+
 
 
 
