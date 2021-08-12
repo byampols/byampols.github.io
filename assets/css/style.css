@@ -15,8 +15,8 @@
 body {
   font-size: 18px;
   line-height: 150%;
-  color: #333;
-  background-color: var(--background-color);
+  color: var(--background-color);
+  background-color: #333;
 }
 /*general styles end*/
 
@@ -27,9 +27,13 @@ header {
   background-position: 80%;
   background-attachment: fixed;
   color: var(--background-color);
-  /*text-shadow: 0 0 1px rgba(235, 101, 52, 1);*/
   text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
-  padding: 10px 25px;
+  padding: 20px 25px;
+  border-top: 5px solid #333;
+  border-left: 5px solid #333;
+  border-right: 5px solid #333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: #333;
   display: flex;
   justify-content: center;
@@ -94,7 +98,7 @@ footer {
 footer h2 {
   color: var(--background-color);
   text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
-  font-size: 6vw;
+  font-size: 4vh;
   text-align: center;
 }
 /*footer styles end*/
@@ -106,6 +110,10 @@ footer h2 {
   background-position: 80%;
   background-attachment: fixed;
   border-bottom: 5px solid #333;
+  border-left: 5px solid #333;
+  border-right: 5px solid #333;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -123,7 +131,7 @@ footer h2 {
   margin-top: 5px;
   margin-bottom: 15px;
   border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 /*jumbo styles end*/
 
@@ -136,12 +144,6 @@ footer h2 {
   justify-content: space-between;
 }
 
-.container h2 {
-  margin: 10px;
-  color: #333;
-  text-shadow: -1px -1px 1px rgba(162, 63, 213, .75), 1px -1px 1px rgba(162, 63, 213, .75), -1px 1px 1px rgba(162, 63, 213, .75), 1px 1px 1px rgba(162, 63, 213, .75);
-}
-
 .port-section {
   width: 100%;
   display: flex;
@@ -151,23 +153,88 @@ footer h2 {
   align-items: center;
   text-align: center;
 }
+
+.port-section h2 {
+  color: var(--background-color);
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
+  background: rgba(162,63,215, .5);
+  border-radius: 10px;
+  text-align: center;
+  width: 100vw;
+  padding: 20px 0;
+  border-left: 5px solid #333;
+  border-right: 5px solid #333;
+}
 /*container styles end*/
 
 /*about-me styles begin*/
+#about-me h3 {
+  margin: 5px;
+  font-size: 24px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: -1px -1px 1px rgba(94, 94, 246, .75), 1px -1px 1px rgba(94, 94, 246, .75), -1px 1px 1px rgba(94, 94, 246, .75), 1px 1px 1px rgba(94, 94, 246, .75);
+}
+
+#about-me p {
+  margin: 10px;
+  font-size: 5vw;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #bio-image {
   width: 200px;
   height: 200px;
-  margin-right: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
 }
 /*about-me styles end*/
 
 /*projects styles begin*/
+
+/* this organizes the sum cards */
+.card-container {
+  display: flex;
+  /* this is a mobile style that will be overridden in media queries */
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+/* this organizes the individual cards */
+.project-card {
+  position: relative;
+  max-width: 500px;
+  margin: 1rem;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+}
+
 .project-card img {
-  width: 80%;
+  object-fit: none;
+  object-position: top left;
+  width: 90vw;
+  height: 50vh;
+  display: block;
+  border: 5px solid var(--tertiary-color);
+  border-radius: 20px;
+}
+
+.project-card h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+  width: 100%;
+  font-size: 8vw;
+  background: rgba(94, 94, 246, .75);
+  margin-top: 60%;
+  padding: 10px;
+  color: #333;
+
 }
 /*projects styles end*/
 
 /*contacts styles begin*/
+
 /*contacts styles end*/
 
 /*media queries*/
