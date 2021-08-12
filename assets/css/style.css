@@ -208,6 +208,7 @@ footer h2 {
   max-width: 500px;
   margin: 1rem;
   box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
 .project-card img {
@@ -229,13 +230,55 @@ footer h2 {
   margin-top: 60%;
   padding: 10px;
   color: #333;
+}
 
+.project-card::before {
+  background: none;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: all .2s linear;
+}
+
+.project-card:hover::before {
+  background: rgba(94, 94, 246, .25);
+}
+
+.project-card h3:hover {
+  color: var(--background-color);
 }
 /*projects styles end*/
 
-/*contacts styles begin*/
+/*contact-me styles begin*/
+#contact-me ul {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: left;
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-/*contacts styles end*/
+#contact-me ul li a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+#contact-me ul li a:hover {
+  color: var(--primary-color);
+}
+
+/*contact-me styles end*/
 
 /*media queries*/
 
