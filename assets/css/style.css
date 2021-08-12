@@ -288,6 +288,7 @@ footer h2 {
 }
 
 @media screen and (min-width: 768px) {
+  /*header styles begin*/
   header {
     border: 0px;
     border-radius: 0px;
@@ -308,12 +309,185 @@ footer h2 {
     padding: 10px 25px;
     font-size: 4vw; /*1.55vw*/
   }
+/*header styles end*/
 
+/*footer styles begin*/
+footer h2 {
+  color: var(--background-color);
+  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
+  font-size: 2vh;
+  text-align: center;
+}
+/*footer styles end*/
+
+/*jumbo styles begin*/
   .jumbotron {
     border-right: 0px;
     border-left: 0px;
     border-radius: 0px;
   }
+/*jumbo styles end*/
+
+/*container styles begin*/
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .port-section {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .port-section h2 {
+    font-size: 28px;
+    background: none;
+    width: auto;
+    padding: auto 20px;
+    margin: 0px;
+    border-right: 5px solid rgba(162,63,215, .5);
+    border-radius: 0px;
+  }
+  /*container styles end*/
+
+/*about-me styles begin*/
+#about-me {
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+  grid-template-rows: auto auto;
+}
+
+#about-me h2 {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  padding: 100px 10px;
+  justify-self: end;
+}
+
+#about-me h3 {
+  font-size: 24px;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  justify-self: center;
+}
+
+#about-me div {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  align-self: start;
+}
+
+#about-me p {
+  font-size: 2vw;
+  margin: 10px 0px;
+}
+
+#bio-image {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  justify-self: center;
+}
+/*about-me styles end*/
+/*projects styles begin*/
+#projects {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#projects h2 {
+  justify-self: end;
+  align-self: start;
+  grid-column: 1;
+  padding: 10px;
+  margin-top: 40px;
+}
+.card-container {
+  grid-column: 2;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.project-card:first-child {
+  justify-self: center;
+}
+
+.project-card img {
+  width: 35vw;
+  height: 35vw;
+}
+
+.project-card:first-child img {
+  width: 60vw;
+}
+
+.project-card h3 {
+  font-size: 4vw;
+  text-align: center;
+}
+
+.project-card:first-child h3 {
+  margin-top: 40%;
+}
+
+.project-card::before {
+  background: none;
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: all .2s linear;
+}
+
+.project-card:hover::before {
+  background: rgba(94, 94, 246, .25);
+}
+
+.project-card h3:hover {
+  color: var(--background-color);
+}
+/*projects styles end*/
+
+/*contact-me styles begin*/
+#contact-me {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#contact-me h2 {
+  justify-self: end;
+  align-self: center;
+  grid-column: 1;
+  padding: 10px;
+}
+
+#contact-me ul {
+  grid-column: 2;
+  justify-self: center;
+}
+
+#contact-me ul li {
+  font-size: 3vw;
+  margin: 5px;
+}
+
+#contact-me ul li a {
+  font-size: 3vw;
+}
+/*contact-me styles end*/
 }
 
   
