@@ -80,9 +80,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  text-shadow: 0 0 10px rgba(173, 93, 78, .75);
-  border-radius: 15px;
-  text-shadow: none;
+  text-shadow: -1px -1px 2px rgba(162, 63, 213, .75), 1px -1px 2px rgba(162, 63, 213, .75), -1px 1px 2px rgba(162, 63, 213, .75), 1px 1px 2px rgba(162, 63, 213, .75);
 }
 /*header styles end*/
 
@@ -215,7 +213,7 @@ footer h2 {
   object-fit: none;
   object-position: top left;
   width: 90vw;
-  height: 50vh;
+  height: 90vw;
   display: block;
   border: 5px solid var(--tertiary-color);
   border-radius: 20px;
@@ -233,9 +231,9 @@ footer h2 {
 }
 
 .project-card::before {
-  background: none;
   content: "";
   display: block;
+  background: none;
   position: absolute;
   border-radius: 20px;
   top: 0;
@@ -490,6 +488,43 @@ footer h2 {
 /*contact-me styles end*/
 }
 
+@media screen and (min-width: 840px) {
+    /*header styles begin*/
+    header {
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 35px;
+    }
+
+    header h1 {
+      font-size: 4vw;
+      border: 0px;
+    }
+  
+    header nav {
+      margin-top: 0px;
+    }
+    
+    header nav ul li a {
+      padding: 10px 25px;
+      font-size: 2.35vw; /*1.55vw*/
+    }
+    /*jumbo styles begin*/
+  .jumbotron {
+    padding: 10px 0px;
+    justify-content: flex-start;
+  }
+  
+  .jumbotron h2 {
+    font-size: 32px;
+    padding: 12px 14px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 5px;
+  }
+/*jumbo styles end*/
+}
   
 
   
