@@ -7,16 +7,24 @@
 
 :root {
   --primary-color: #a23fd5;
+  --primary-color-75: rgba(162, 63, 213, .75);
+  --primary-color-50: rgba(162,63,215, .5);
   --secondary-color: #e620b4;
+  --secondary-color-75: rgba(230, 32, 180, .75);
   --tertiary-color: #5e5ef6;
-  --background-color: #e2dadb;
+  --tertiary-color-75: rgba(94, 94, 246, .75);
+  --tertiary-color-65: rgba(94, 94, 246, .65);
+  --tertiary-color-50: rgba(94, 94, 246, .5);
+  --tertiary-color-25: rgba(94, 94, 246, .25);
+  --light: #e2dadb;
+  --dark: #333333;
 }
 
 body {
   font-size: 18px;
   line-height: 150%;
-  color: var(--background-color);
-  background-color: #333;
+  color: var(--light);
+  background-color: var(--dark);
 }
 /*general styles end*/
 
@@ -26,15 +34,15 @@ header {
   background-size: cover;
   background-position: 80%;
   background-attachment: fixed;
-  color: var(--background-color);
-  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
+  color: var(--light);
+  text-shadow: -1px -1px 1px var(--secondary-color-75), 1px -1px 1px var(--secondary-color-75), -1px 1px 1px var(--secondary-color-75), 1px 1px 1px var(--secondary-color-75);
   padding: 20px 25px;
-  border-top: 5px solid #333;
-  border-left: 5px solid #333;
-  border-right: 5px solid #333;
+  border-top: 5px solid var(--dark);
+  border-left: 5px solid var(--dark);
+  border-right: 5px solid var(--dark);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-color: #333;
+  background-color: var(--dark);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -48,13 +56,13 @@ header h1 {
   font-size: 34px;
   margin: 0;
   padding-bottom: 15px;
-  border-bottom: 3px solid rgba(94, 94, 246, .65);
+  border-bottom: 3px solid var(--tertiary-color-65);
   border-radius: 1px;
 }
 
 header a {
   text-decoration: none;
-  color: var(--background-color);
+  color: var(--light);
 }
 
 header nav {
@@ -67,7 +75,6 @@ header nav ul {
   justify-content:space-evenly;
   align-items: center;
   list-style: none;
-    /* this is a mobile style that will be overridden in media queries */
   gap: 10px 0px;
 }
 
@@ -80,7 +87,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  text-shadow: -1px -1px 2px rgba(162, 63, 213, .75), 1px -1px 2px rgba(162, 63, 213, .75), -1px 1px 2px rgba(162, 63, 213, .75), 1px 1px 2px rgba(162, 63, 213, .75);
+  text-shadow: -1px -1px 2px var(--primary-color-75), 1px -1px 2px var(--primary-color-75), -1px 1px 2px var(--primary-color-75), 1px 1px 2px var(--primary-color-75);
 }
 /*header styles end*/
 
@@ -91,12 +98,12 @@ footer {
   background-position: 80%;
   background-attachment: fixed;
   padding: 10px;
-  border-top: 5px solid #333;
+  border-top: 5px solid var(--dark);
 }
 
 footer h2 {
-  color: var(--background-color);
-  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
+  color: var(--light);
+  text-shadow: -1px -1px 1px var(--secondary-color-75), 1px -1px 1px var(--secondary-color-75), -1px 1px 1px var(--secondary-color-75), 1px 1px 1px var(--secondary-color-75);
   font-size: 4vh;
   text-align: center;
 }
@@ -108,9 +115,9 @@ footer h2 {
   background-size: cover;
   background-position: 80%;
   background-attachment: fixed;
-  border-bottom: 5px solid #333;
-  border-left: 5px solid #333;
-  border-right: 5px solid #333;
+  border-bottom: 5px solid var(--dark);
+  border-left: 5px solid var(--dark);
+  border-right: 5px solid var(--dark);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   display: flex;
@@ -122,10 +129,10 @@ footer h2 {
 .jumbotron h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 18px;
-  color: var(--background-color);
+  color: var(--light);
   text-align: left;
   font-weight: normal;
-  background: rgba(94, 94, 246, .5);
+  background: var(--tertiary-color-50);
   padding: 5px 8px;
   margin-top: 5px;
   margin-bottom: 15px;
@@ -154,17 +161,17 @@ footer h2 {
 }
 
 .port-section h2 {
-  color: var(--background-color);
+  color: var(--light);
   font-size: 30px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
-  background: rgba(162,63,215, .5);
+  text-shadow: -1px -1px 1px var(--secondary-color-75), 1px -1px 1px var(--secondary-color-75), -1px 1px 1px var(--secondary-color-75), 1px 1px 1px var(--secondary-color-75);
+  background: var(--primary-color-50);
   border-radius: 10px;
   text-align: center;
   width: 100vw;
   padding: 20px 0;
-  border-left: 5px solid #333;
-  border-right: 5px solid #333;
+  border-left: 5px solid var(--dark);
+  border-right: 5px solid var(--dark);
 }
 /*container styles end*/
 
@@ -173,7 +180,7 @@ footer h2 {
   margin: 10px;
   font-size: 24px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-shadow: -1px -1px 1px rgba(94, 94, 246, .75), 1px -1px 1px rgba(94, 94, 246, .75), -1px 1px 1px rgba(94, 94, 246, .75), 1px 1px 1px rgba(94, 94, 246, .75);
+  text-shadow: -1px -1px 1px var(--tertiary-color-75), 1px -1px 1px var(--tertiary-color-75), -1px 1px 1px var(--tertiary-color-75), 1px 1px 1px var(--tertiary-color-75);
 }
 
 #about-me p {
@@ -225,10 +232,10 @@ footer h2 {
   position: absolute;
   width: 100%;
   font-size: 8vw;
-  background: rgba(94, 94, 246, .75);
+  background: var(--tertiary-color-75);
   margin-top: 60%;
   padding: 10px;
-  color: #333;
+  color: var(--dark);
 }
 
 .project-card::before {
@@ -246,11 +253,11 @@ footer h2 {
 }
 
 .project-card:hover::before {
-  background: rgba(94, 94, 246, .25);
+  background: var(--tertiary-color-25);
 }
 
 .project-card h3:hover {
-  color: var(--background-color);
+  color: var(--light);
 }
 /*projects styles end*/
 
@@ -312,8 +319,8 @@ footer h2 {
 
 /*footer styles begin*/
 footer h2 {
-  color: var(--background-color);
-  text-shadow: -1px -1px 1px rgba(230, 32, 180, .75), 1px -1px 1px rgba(230, 32, 180, .75), -1px 1px 1px rgba(230, 32, 180, .75), 1px 1px 1px rgba(230, 32, 180, .75);
+  color: var(--light);
+  text-shadow: -1px -1px 1px var(--secondary-color-75), 1px -1px 1px var(--secondary-color-75), -1px 1px 1px var(--secondary-color-75), 1px 1px 1px var(--secondary-color-75);
   font-size: 2vh;
   text-align: center;
 }
@@ -350,7 +357,7 @@ footer h2 {
     width: auto;
     padding: auto 20px;
     margin: 0px;
-    border-right: 5px solid rgba(162,63,215, .5);
+    border-right: 5px solid var(--primary-color-50);
     border-radius: 0px;
   }
   /*container styles end*/
@@ -587,9 +594,6 @@ footer h2 {
     height: 250px;
   }
   /*about-me styles end*/
-
-  /*projects styles begin*/
-  /*projects styles end*/
 }
   
 

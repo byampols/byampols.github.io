@@ -1,23 +1,17 @@
-# Horiseon
+# Portfolio
 
 ## Description 
 
-Tasked by a fictional marketing agency to refactor their codebase to follow accesibility standards so that their site would be optimized for search engines. 
+A portfolio to demonstrate my work capabilities. It is currently under-development (hence placeholders are used.) This readme will be updated as the information in the portfolio is filled out.
 
-To complete the task, I needed to ensure the site worked properly, make sure the HTML used proper semantic elements and that images had alt elements. I also needed to clean the CSS code and ensure that the HTML worked properly with Reader View.
+Deployed At: https://byampols.github.io/
 
-The finished website: https://byampols.github.io/horiseon/
-
-The GitHub Repo: https://github.com/byampols/horiseon
+Repo: https://github.com/byampols/byampols.github.io
 
 
 ## Usage 
 
 ![alt text](assets/images/screenshot.png)
-
-## Credits
-
-https://github.com/coding-boot-camp/urban-octo-telegram
 
 ## License
 
@@ -683,4 +677,4 @@ if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
 <https://www.gnu.org/licenses/>.
 
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2021 Ben Yampolsky. All Rights Reserved.
