@@ -203,18 +203,19 @@ footer h2 {
 /* this organizes the individual cards */
 .project-card {
   position: relative;
-  max-width: 500px;
+  max-width: 100vw;
   margin: 1rem;
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
-  z-index: 10;
+  width: 90vw;
+  height: 90vw;
 }
 
 .project-card img {
   object-fit: none;
   object-position: top left;
-  width: 90vw;
-  height: 90vw;
+  width: 100%;
+  height: 100%;
   display: block;
+  box-shadow: 4px 4px 7px rgba(0,0,0,.75);
   border: 5px solid var(--tertiary-color);
   border-radius: 20px;
 }
@@ -415,16 +416,13 @@ footer h2 {
     justify-content: space-evenly;
   }
 
-  .project-card:first-child {
-    justify-self: center;
-  }
-
-  .project-card img {
+  .project-card {
     width: 35vw;
     height: 35vw;
   }
 
-  .project-card:first-child img {
+  .project-card:first-child {
+    justify-self: center;
     width: 60vw;
   }
 
@@ -435,28 +433,6 @@ footer h2 {
 
   .project-card:first-child h3 {
     margin-top: 40%;
-  }
-
-  .project-card::before {
-    background: none;
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-    transition: all .2s linear;
-  }
-
-  .project-card:hover::before {
-    background: rgba(94, 94, 246, .25);
-  }
-
-  .project-card h3:hover {
-    color: var(--background-color);
   }
   /*projects styles end*/
 
@@ -507,7 +483,7 @@ footer h2 {
   }
   
   header nav ul li a {
-    padding: 10px 25px;
+    padding: 35px 10px;
     font-size: 2.35vw; /*1.55vw*/
   }
     /*jumbo styles begin*/
@@ -518,62 +494,86 @@ footer h2 {
   }
     
   .jumbotron h2 {
-    font-size: 32px;
-    padding: 12px 14px;
+    font-size: 28px;
+    padding: 10px 12px;
     border-top-left-radius: 0px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 5px;
   }
-/*jumbo styles end*/
+  /*jumbo styles end*/
 
-/*footer styles begin*/
-footer h2 {
-  font-size: 6vh;
-}
-/*footer styles end*/
+  /*footer styles begin*/
+  footer h2 {
+    font-size: 4vh;
+  }
+  /*footer styles end*/
 
-/*container styles begin*/
-.container h2 {
-  font-size: 3.15vw;
-  padding-right: 5%;
-}
+  /*container styles begin*/
+  #about-me h2, #contact-me h2, #projects h2 {
+    font-size: 3.15vw;
+    padding-right: 5%;
+  }
+  /*container styles end*/
 
-#projects h2, #contact-me h2 {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-/*container styles end*/
+  /*about-me styles begin*/
+    #about-me h3 {
+      font-size: 2.75vw;
+      padding: 2.5% 0;
+    }
 
-/*about-me styles begin*/
-  #about-me h3 {
+    #about-me p {
+      font-size: 1.75vw;
+      margin-top: 5%;
+    }
+  /*about-me styles end*/
+
+  /*projects styles begin*/
+  #projects h2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .card-container {
+    justify-content: space-between;
+    margin: 0px 3vw;
+  }
+
+  .project-card {
+    width: 20vw;
+    height: 20vw;
+    margin: .75rem .25rem;
+  }
+
+  .project-card:first-child {
+    width: 50vw;
+  }
+
+  .project-card h3 {
     font-size: 2.75vw;
-    padding: 2.5% 0;
+    padding: 3%;
   }
 
-  #about-me p {
-    font-size: 1.75vw;
-    margin-top: 5%;
+  .project-card:first-child h3 {
+    margin-top: 25%;
+    padding: 2%;
   }
-/*about-me styles end*/
+  /*projects styles end*/
 
-/*projects styles begin*/
-/*projects styles end*/
+  /*contact-me styles begin*/
+  #contact-me h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
-/*contact-me styles begin*/
-#contact-me h2 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+  #contact-me ul {
+    line-height: 1.25;
+  }
 
-#contact-me ul {
-  line-height: 1.25;
-}
-
-#contact-me ul li, #contact-me ul li a {
-  font-size: 2.25vw;
-}
-/*contact-me styles end*/
+  #contact-me ul li, #contact-me ul li a {
+    font-size: 2.25vw;
+  }
+  /*contact-me styles end*/
 }
   
 @media screen and (min-width: 1024px) {
@@ -587,6 +587,9 @@ footer h2 {
     height: 250px;
   }
   /*about-me styles end*/
+
+  /*projects styles begin*/
+  /*projects styles end*/
 }
   
 
