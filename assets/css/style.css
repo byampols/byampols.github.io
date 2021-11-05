@@ -594,6 +594,14 @@ footer h2 {
     height: 250px;
   }
   /*about-me styles end*/
+
+   /*projects styles begin*/
+
+  .project-card h3 {
+    font-size: 2.5vw;
+    line-height: .75;
+  }
+  /*projects styles end*/
 }
   
 
