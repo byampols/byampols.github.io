@@ -178,7 +178,7 @@ footer h2 {
 /*container styles end*/
 
 /*about-me styles begin*/
-#about-me h3 {
+#about-me h3, #technical-skills h3 {
   margin: 10px;
   font-size: 24px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -192,9 +192,20 @@ footer h2 {
 }
 
 #bio-image {
+  margin: 0;
+  transition: all .2s linear;
+}
+
+#bio-image img {
   width: 200px;
   height: 200px;
-  margin: 0;
+  border-radius: 10px;
+  transition: .2s linear;
+}
+
+#bio-image img:hover {
+  border: 5px solid var(--tertiary-color);
+  background: var(--tertiary-color-25) no-repeat top center;
   border-radius: 10px;
 }
 /*about-me styles end*/
@@ -279,7 +290,7 @@ footer h2 {
 /*projects styles end*/
 
 /*contact-me styles begin*/
-#contact-me ul {
+#contact-me ul, #technical-skills ul {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -302,6 +313,16 @@ footer h2 {
 }
 
 /*contact-me styles end*/
+
+/*technical-skills styles begin*/
+#technical-skills ul {
+  text-align: center;
+}
+
+#technical-skills ul li {
+  margin: .5rem 0;
+}
+/*technical-skills styles end*/
 
 /*media queries*/
 @media screen and (min-width: 375px) {
@@ -461,24 +482,24 @@ footer h2 {
   /*projects styles end*/
 
   /*contact-me styles begin*/
-  #contact-me {
+  #contact-me, #technical-skills {
     display: grid;
     grid-template-columns: 20% 80%;
   }
 
-  #contact-me h2 {
+  #contact-me h2, #technical-skills h2 {
     justify-self: end;
     align-self: center;
     grid-column: 1;
     padding: 10px;
   }
 
-  #contact-me ul {
+  #contact-me ul, #technical-skills ul {
     grid-column: 2;
     justify-self: center;
   }
 
-  #contact-me ul li {
+  #contact-me ul li, #technical-skills ul li {
     font-size: 3vw;
     margin: 5px;
   }
@@ -534,7 +555,7 @@ footer h2 {
   /*footer styles end*/
 
   /*container styles begin*/
-  #about-me h2, #contact-me h2, #projects h2 {
+  #about-me h2, #contact-me h2, #projects h2, #technical-skills h2 {
     font-size: 3.15vw;
     padding-right: 5%;
   }
@@ -585,16 +606,16 @@ footer h2 {
   /*projects styles end*/
 
   /*contact-me styles begin*/
-  #contact-me h2 {
+  #contact-me h2, #technical-skills h2  {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  #contact-me ul {
+  #contact-me ul, #technical-skills ul  {
     line-height: 1.25;
   }
 
-  #contact-me ul li, #contact-me ul li a {
+  #contact-me ul li, #contact-me ul li a, #technical-skills ul li {
     font-size: 2.25vw;
   }
   /*contact-me styles end*/
@@ -606,7 +627,7 @@ footer h2 {
     line-height: 1.5;
   }
 
-  #bio-image {
+  #bio-image img {
     width: 250px;
     height: 250px;
   }
@@ -620,7 +641,10 @@ footer h2 {
   }
   /*projects styles end*/
 }
-  
+
+#technical-skills h2 {
+  line-height: 1;
+}
 
 
 
