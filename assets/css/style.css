@@ -256,6 +256,11 @@ footer h2 {
   transition: all .2s linear;
 }
 
+.project-card h3 a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
 .highlight-project h3 {
   background: var(--secondary-color-75);
 }
@@ -282,7 +287,7 @@ footer h2 {
   background: var(--secondary-color-25);
 }
 
-.project-card h3:hover {
+.project-card h3 a:hover {
   color: var(--light);
 }
 
@@ -636,7 +641,7 @@ footer h2 {
    /*projects styles begin*/
 
   .project-card h3 {
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     line-height: .75;
   }
   /*projects styles end*/
