@@ -20,6 +20,7 @@
   --tertiary-color-25: rgba(94, 94, 246, .25);
   --light: #e2dadb;
   --dark: #333333;
+  --invisible: rgba(0, 0, 0, 0)
 }
 
 body {
@@ -191,6 +192,21 @@ footer h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#about-me p a {
+  text-decoration: none;
+  font-style: italic;
+  color: var(--secondary-color);
+  transition: .2s linear;
+}
+
+#about-me p a:visited {
+  color: var(--tertiary-color);
+}
+
+#about-me p a:hover {
+  text-shadow: -1px -1px 1px var(--light), 1px -1px 1px var(--light), -1px 1px 1px var(--light), 1px 1px 1px var(--light);
+}
+
 #bio-image {
   margin: 0;
   transition: all .2s linear;
@@ -250,7 +266,7 @@ footer h2 {
   width: 100%;
   font-size: 8vw;
   background: var(--tertiary-color-75);
-  margin-top: 60%;
+  margin-top: 40%;
   padding: 10px;
   color: var(--dark);
   transition: all .2s linear;
@@ -259,6 +275,24 @@ footer h2 {
 .project-card h3 a {
   text-decoration: none;
   color: var(--dark);
+}
+
+.project-card p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--invisible);
+  padding: 10%;
+  top: 25%;
+  left: 25%;
+  transform: translate(-25%, -35%);
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  transition: all .2s linear;
+}
+
+.project-card p:hover {
+  color: var(--light);
+  text-shadow: -1px -1px 1px var(--dark), 1px -1px 1px var(--dark), -1px 1px 1px var(--dark), 1px 1px 1px var(--dark);
 }
 
 .highlight-project h3 {
@@ -471,19 +505,19 @@ footer h2 {
     height: 35vw;
   }
 
-  .project-card:first-child {
+  /* .project-card:first-child {
     justify-self: center;
     width: 60vw;
-  }
+  } */
 
   .project-card h3 {
     font-size: 4vw;
     text-align: center;
   }
 
-  .project-card:first-child h3 {
+  /* .project-card:first-child h3 {
     margin-top: 40%;
-  }
+  } */
   /*projects styles end*/
 
   /*contact-me styles begin*/
@@ -590,24 +624,24 @@ footer h2 {
   }
 
   .project-card {
-    width: 20vw;
+    width: 30vw;
     height: 20vw;
     margin: .75rem .25rem;
   }
 
-  .project-card:first-child {
+  /* .project-card:first-child {
     width: 50vw;
-  }
+  } */
 
   .project-card h3 {
     font-size: 2.75vw;
     padding: 3%;
   }
 
-  .project-card:first-child h3 {
+  /* .project-card:first-child h3 {
     margin-top: 25%;
     padding: 2%;
-  }
+  } */
   /*projects styles end*/
 
   /*contact-me styles begin*/
