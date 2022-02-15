@@ -20,7 +20,8 @@
   --tertiary-color-25: rgba(94, 94, 246, .25);
   --light: #e2dadb;
   --dark: #333333;
-  --invisible: rgba(0, 0, 0, 0)
+  --glass: rgba(255, 255, 255, .5);
+  --invisible: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -52,6 +53,11 @@ header {
   z-index: 9999;
   top: 0;
 }
+
+header::first-letter {
+
+}
+
 /*rgba(226,218,219,.75) #eb6534*/
 header h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -179,7 +185,7 @@ footer h2 {
 /*container styles end*/
 
 /*about-me styles begin*/
-#about-me h3, #technical-skills h3 {
+#about-me h3, #skills h3 {
   margin: 10px;
   font-size: 24px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -260,16 +266,18 @@ footer h2 {
   border: 5px solid var(--secondary-color);
 }
 
+
 .project-card h3 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   position: absolute;
   width: 100%;
   font-size: 8vw;
-  background: var(--tertiary-color-75);
   margin-top: 40%;
   padding: 10px;
   color: var(--dark);
   transition: all .2s linear;
+  background: var(--tertiary-color-75);
+  backdrop-filter: blur(10px);
 }
 
 .project-card h3 a {
@@ -329,39 +337,48 @@ footer h2 {
 /*projects styles end*/
 
 /*contact-me styles begin*/
-#contact-me ul, #technical-skills ul {
+#contact-me table, #skills table {
+  width: 70%;
+  justify-self: center;
+}
+
+#contact-me tr, #skills tr {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   text-align: left;
-  list-style: none;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-#contact-me ul li a {
+#contact-me tr td a {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   color: var(--secondary-color);
   font-weight: bold;
 }
 
-#contact-me ul li a:hover {
+#contact-me tr td a:hover {
   color: var(--primary-color);
 }
 
 /*contact-me styles end*/
 
-/*technical-skills styles begin*/
-#technical-skills ul {
+/*skills styles begin*/
+#skills table {
+  width: 90%;
+}
+
+#skills tr {
   text-align: center;
 }
 
-#technical-skills ul li {
-  margin: 1rem 0;
+#skills tr td {
+  height: 8rem;
 }
-/*technical-skills styles end*/
+
+.skill-title {
+  padding-right: 1rem;
+}
+/*skills styles end*/
 
 /*media queries*/
 @media screen and (min-width: 375px) {
@@ -369,6 +386,18 @@ footer h2 {
     gap: 25px;
   }
 }
+
+@media screen and (min-width: 450px) {
+  #about-me div {
+    margin: 2rem;
+  }
+
+  #about-me p {
+    font-size: 3vw;
+  }
+}
+
+
 
 @media screen and (min-width: 768px) {
   /*header styles begin*/
@@ -389,8 +418,8 @@ footer h2 {
   }
   
   header nav ul li a {
-    padding: 10px 25px;
-    font-size: 4vw; /*1.55vw*/
+    padding: 10px 0px;
+    font-size: 3.4vw; /*1.55vw*/
   }
 /*header styles end*/
 
@@ -454,7 +483,7 @@ footer h2 {
   }
 
   #about-me h3 {
-    font-size: 24px;
+    font-size: 1rem;
     grid-column: 2;
     grid-row: 1;
     align-self: end;
@@ -465,6 +494,7 @@ footer h2 {
     grid-column: 3;
     grid-row: 1 / 3;
     align-self: start;
+    margin-right: 5rem;
   }
 
   #about-me p {
@@ -521,32 +551,38 @@ footer h2 {
   /*projects styles end*/
 
   /*contact-me styles begin*/
-  #contact-me, #technical-skills {
+  #contact-me, #skills {
     display: grid;
     grid-template-columns: 20% 80%;
+    margin: 1.5rem 0;
   }
 
-  #contact-me h2, #technical-skills h2 {
+  #contact-me h2, #skills h2 {
     justify-self: end;
     align-self: center;
     grid-column: 1;
     padding: 10px;
   }
 
-  #contact-me ul, #technical-skills ul {
+  #contact-me tr, #skills tr {
     grid-column: 2;
     justify-self: center;
   }
 
-  #contact-me ul li {
+  #contact-me tr td {
     font-size: 3vw;
     margin: 5px;
   }
 
-  #contact-me ul li a {
+  #contact-me tr td a {
     font-size: 3vw;
   }
   /*contact-me styles end*/
+
+  /*skills styles*/
+  #skills tr td {
+    height: 6.5rem;
+  }
 }
 
 @media screen and (min-width: 840px) {
@@ -594,7 +630,7 @@ footer h2 {
   /*footer styles end*/
 
   /*container styles begin*/
-  #about-me h2, #contact-me h2, #projects h2, #technical-skills h2 {
+  #about-me h2, #contact-me h2, #projects h2, #skills h2 {
     font-size: 3.15vw;
     padding-right: 5%;
   }
@@ -602,7 +638,7 @@ footer h2 {
 
   /*about-me styles begin*/
     #about-me h3 {
-      font-size: 2.75vw;
+      font-size: 1.15rem;
       padding: 2.5% 0;
     }
 
@@ -645,16 +681,16 @@ footer h2 {
   /*projects styles end*/
 
   /*contact-me styles begin*/
-  #contact-me h2, #technical-skills h2  {
+  #contact-me h2, #skills h2  {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  #contact-me ul, #technical-skills ul  {
+  #contact-me tr, #skills tr  {
     line-height: 1.25;
   }
 
-  #contact-me ul li, #contact-me ul li a, #technical-skills ul li {
+  #contact-me tr td, #contact-me tr td a, #skills tr td {
     font-size: 2.25vw;
   }
   /*contact-me styles end*/
@@ -664,6 +700,10 @@ footer h2 {
   /*about-me styles begin*/
   #about-me p {
     line-height: 1.5;
+  }
+
+  #about-me h3 {
+    font-size: 1.5rem;
   }
 
   #bio-image img {
@@ -681,11 +721,11 @@ footer h2 {
   /*projects styles end*/
 }
 
-#technical-skills {
+#skills {
   margin: 2rem 0;
 }
 
-#technical-skills h2 {
+#skills h2 {
   line-height: 1;
 }
 
