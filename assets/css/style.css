@@ -93,6 +93,7 @@ header nav ul li a {
   padding: 10px 15px;
   font-weight: bold;
   font-size: 6vw; /*1.55vw*/
+  transition: .2s linear;
 }
 
 header nav ul li a:hover {
@@ -210,7 +211,7 @@ footer h2 {
 }
 
 #about-me p a:hover {
-  text-shadow: -1px -1px 1px var(--light), 1px -1px 1px var(--light), -1px 1px 1px var(--light), 1px 1px 1px var(--light);
+  text-shadow: -.75px -.75px .75px var(--light), .75px -.75px .75px var(--light), -.75px .75px .75px var(--light), .75px .75px .75px var(--light);
 }
 
 #bio-image {
@@ -283,6 +284,7 @@ footer h2 {
 .project-card h3 a {
   text-decoration: none;
   color: var(--dark);
+  transition: .2s linear;
 }
 
 .project-card p {
@@ -354,6 +356,7 @@ footer h2 {
   font-size: 16px;
   color: var(--secondary-color);
   font-weight: bold;
+  transition: .2s linear;
 }
 
 #contact-me tr td a:hover {
